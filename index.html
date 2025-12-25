@@ -313,6 +313,16 @@
         color: white;
     }
 
+    .gold-text {
+        color: #CBA135;
+        font-weight: bold;
+    }
+
+    .gold-hover:hover {
+        color: #CBA135;
+        transition: color 0.3s ease;
+    }
+
     @media (max-width: 900px) {
       .container {
         grid-template-columns: 1fr;
@@ -368,7 +378,8 @@
         <p class="intro">
           I help private landlords make informed decisions with clarity and confidence.
           <br />
-          <strong>No marketing tricks.</strong> <strong>No legal jargon.</strong> Just clear thinking.
+            <strong class="gold-text">No marketing tricks.</strong>
+            <strong class="gold-text">No legal jargon.</strong>Just clear thinking.
         </p>
 
         <ul>
@@ -379,7 +390,7 @@
         </ul>
 
         <div class="cta">
-          <a class="btn" href="resources.html">Explore resources</a>
+          <a class="nav-link gold-hover" href="resources.html">Resources</a>
           <span class="note">No spam. No pressure. Just clarity.</span>
         </div>
       </div>
