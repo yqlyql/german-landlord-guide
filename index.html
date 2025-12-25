@@ -39,16 +39,16 @@
       display:flex;
       align-items: stretch;
     }
-    .hero::before{
-      content:"";
-      position:absolute; inset:0;
-      background-image: url("website/backgroundimmage.png");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      filter: blur(1.2px) saturate(.9) contrast(.95);
-      transform: scale(1.03);
-      opacity: .90;
+    .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("website/backgroundimmage.png");
+    background-size: cover;
+    background-position: center;
+    filter: blur(0.6px) brightness(1.05);
+    transform: scale(1.02);
+    opacity: 1;
     }
     .hero::after{
     content:"";
@@ -56,9 +56,9 @@
     inset:0;
     background: linear-gradient(
         90deg,
-        rgba(0, 0, 0, 0.35) 0%,
-        rgba(0, 0, 0, 0.20) 50%,
-        rgba(0, 0, 0, 0.35) 100%
+        rgba(0, 0, 0, 0.15) 0%,
+        rgba(0, 0, 0, 0.05) 50%,
+        rgba(0, 0, 0, 0.15) 100%
     );
     }
 
