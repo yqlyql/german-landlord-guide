@@ -1,107 +1,342 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>German Landlord Guide</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="description" content="Clear, calm, structured guidance for property owners in Germany." />
   <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: url("website backgroundimmage.png") no-repeat center center fixed;
-      background-size: cover;
-      color: #ffffff;
+    :root{
+      --bg:#0b1220;
+      --panel: rgba(12, 18, 32, 0.62);
+      --panel-strong: rgba(12, 18, 32, 0.74);
+      --text:#f3f5f7;
+      --muted: rgba(243,245,247,.78);
+      --muted2: rgba(243,245,247,.62);
+      --stroke: rgba(255,255,255,.10);
+      --accent:#2b5bff;
+      --accent2:#1f46d8;
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --radius: 18px;
+      --max: 1100px;
     }
 
-    .overlay {
-      background: rgba(0, 0, 0, 0.55);
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      color:var(--text);
+      background: var(--bg);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      letter-spacing: .1px;
+    }
+
+    /* Background image layer */
+    .hero{
       min-height: 100vh;
-      padding: 80px 60px;
+      position: relative;
+      overflow: hidden;
+      display:flex;
+      align-items: stretch;
+    }
+    .hero::before{
+      content:"";
+      position:absolute; inset:0;
+      background-image: url("website/backgroundimmage.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      filter: blur(1.2px) saturate(.9) contrast(.95);
+      transform: scale(1.03);
+      opacity: .90;
+    }
+    .hero::after{
+      /* dark overlay for “consulting” mood */
+      content:"";
+      position:absolute; inset:0;
+      background: radial-gradient(1000px 600px at 20% 25%, rgba(0,0,0,.35), rgba(0,0,0,.72)),
+                  linear-gradient(90deg, rgba(0,0,0,.68) 0%, rgba(0,0,0,.45) 45%, rgba(0,0,0,.65) 100%);
     }
 
-    .container {
-      max-width: 820px;
+    .container{
+      width: min(var(--max), calc(100% - 56px));
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      display:flex;
+      flex-direction: column;
     }
 
-    h1 {
-      font-size: 48px;
-      line-height: 1.2;
-      margin-bottom: 20px;
+    header{
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      padding: 22px 0;
+    }
+    .brand{
+      display:flex;
+      align-items: baseline;
+      gap: 10px;
+      text-decoration:none;
+      color: var(--text);
+    }
+    .brand .name{
+      font-weight: 650;
+      font-size: 16px;
+      letter-spacing:.3px;
+    }
+    .brand .tag{
+      font-size: 13px;
+      color: var(--muted2);
     }
 
-    p {
-      font-size: 18px;
-      line-height: 1.7;
-      margin-bottom: 18px;
-      color: #f1f1f1;
+    nav a{
+      color: var(--muted);
+      text-decoration:none;
+      font-size: 13px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid transparent;
+    }
+    nav a:hover{
+      border-color: var(--stroke);
+      background: rgba(255,255,255,.04);
+      color: var(--text);
     }
 
-    .section {
-      margin-top: 40px;
+    main{
+      flex:1;
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 22px;
+      align-items: center;
+      padding: 36px 0 56px;
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 26px;
-      background: #1e3a8a;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 600;
+    .card{
+      background: var(--panel);
+      border: 1px solid var(--stroke);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 34px 34px 30px;
+      backdrop-filter: blur(10px);
     }
 
-    .btn:hover {
-      background: #1c3278;
+    h1{
+      margin: 0 0 14px;
+      font-size: clamp(34px, 3.6vw, 56px);
+      line-height: 1.04;
+      letter-spacing: -.6px;
+      font-weight: 720;
     }
 
-    .small {
+    .sub{
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.55;
+      max-width: 58ch;
+    }
+
+    .divider{
+      height:1px;
+      background: var(--stroke);
+      margin: 22px 0;
+    }
+
+    .intro{
+      margin: 0 0 12px;
+      color: var(--muted);
       font-size: 14px;
-      opacity: 0.85;
-      margin-top: 10px;
+      line-height: 1.7;
+    }
+    .intro strong{ color: var(--text); font-weight: 650; }
+
+    .list-title{
+      margin: 0 0 10px;
+      font-size: 13px;
+      letter-spacing: .2px;
+      color: var(--muted2);
+      text-transform: uppercase;
+    }
+    ul{
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+    li{ margin: 8px 0; }
+
+    .cta-row{
+      display:flex;
+      align-items:center;
+      gap: 14px;
+      margin-top: 22px;
+      flex-wrap: wrap;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      background: var(--accent);
+      color: white;
+      border: 1px solid rgba(255,255,255,.10);
+      padding: 12px 16px;
+      border-radius: 12px;
+      text-decoration:none;
+      font-size: 14px;
+      font-weight: 650;
+      box-shadow: 0 10px 24px rgba(43,91,255,.25);
+    }
+    .btn:hover{ background: var(--accent2); }
+    .btn:active{ transform: translateY(1px); }
+
+    .note{
+      color: var(--muted2);
+      font-size: 12.5px;
+      line-height: 1.5;
+    }
+
+    /* Right panel - credibility block */
+    .side{
+      background: var(--panel-strong);
+      border: 1px solid var(--stroke);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 26px;
+      backdrop-filter: blur(10px);
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      padding: 8px 10px;
+      border: 1px solid var(--stroke);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 12.5px;
+      background: rgba(255,255,255,.04);
+      margin-bottom: 14px;
+      width: fit-content;
+    }
+    .side h2{
+      margin: 0 0 10px;
+      font-size: 18px;
+      letter-spacing: -.2px;
+    }
+    .side p{
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .quote{
+      border-left: 2px solid rgba(255,255,255,.18);
+      padding-left: 12px;
+      margin: 14px 0 0;
+      color: rgba(243,245,247,.86);
+      font-size: 13.5px;
+      line-height: 1.6;
+    }
+
+    footer{
+      position: relative;
+      z-index: 1;
+      padding: 18px 0 26px;
+      color: var(--muted2);
+      font-size: 12.5px;
+      display:flex;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    footer a{ color: var(--muted); text-decoration:none; }
+    footer a:hover{ color: var(--text); }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      main{ grid-template-columns: 1fr; }
+      .card{ padding: 28px 24px; }
+      .side{ padding: 22px; }
+    }
+    @media (max-width: 520px){
+      .container{ width: min(var(--max), calc(100% - 28px)); }
+      nav{ display:none; }
     }
   </style>
 </head>
 
 <body>
-
-  <div class="overlay">
+  <section class="hero">
     <div class="container">
+      <header>
+        <a class="brand" href="#">
+          <span class="name">German Landlord Guide</span>
+          <span class="tag">Calm, structured guidance</span>
+        </a>
+        <nav>
+          <a href="#resources">Resources</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
 
-      <h1>Clear guidance for landlords in Germany.</h1>
+      <main>
+        <section class="card" aria-label="Hero content">
+          <h1>Clear guidance for property owners in Germany.</h1>
+          <p class="sub">
+            Calm, structured insights for navigating German real estate —
+            without pressure, sales tactics, or unnecessary complexity.
+          </p>
 
-      <p>
-        Practical, experience-based insights to help you navigate German property rules with confidence —  
-        without legal jargon, pressure, or unnecessary complexity.
-      </p>
+          <div class="divider"></div>
 
-      <div class="section">
-        <p><strong>What you’ll find here:</strong></p>
-        <ul>
-          <li>Clear explanations of German rental regulations</li>
-          <li>Practical guidance based on real situations</li>
-          <li>Structured thinking instead of legal confusion</li>
-          <li>Support for informed, calm decision-making</li>
-        </ul>
-      </div>
+          <p class="intro">
+            I help private landlords make informed decisions and avoid costly mistakes.
+            <br />
+            <strong>No marketing talk.</strong> <strong>No legal jargon.</strong> Just clarity you can act on.
+          </p>
 
-      <div class="section">
-        <p><strong>Who this is for:</strong></p>
-        <ul>
-          <li>Private landlords in Germany</li>
-          <li>Property owners seeking clarity and structure</li>
-          <li>Anyone who values calm, informed decision-making</li>
-        </ul>
-      </div>
+          <p class="list-title" id="resources">What you’ll find here</p>
+          <ul>
+            <li>Clear explanations of German rental regulations</li>
+            <li>Practical guidance based on real situations</li>
+            <li>Structured thinking instead of legal confusion</li>
+            <li>Support for calm, informed decision-making</li>
+          </ul>
 
-      <div class="section">
-        <a href="#subscribe" class="btn">Get the Free Guide</a>
-        <p class="small">No spam. Just practical insights you can actually use.</p>
-      </div>
+          <div class="cta-row">
+            <a class="btn" href="#contact">Explore resources</a>
+            <span class="note">No spam. No pressure. Only practical insights.</span>
+          </div>
+        </section>
 
+        <aside class="side" id="about" aria-label="Credibility panel">
+          <div class="pill">Independent • Practical • Germany-focused</div>
+          <h2>A consulting-style approach — but approachable.</h2>
+          <p>
+            This project is built for landlords who want clarity and structure.
+            You should feel confident asking questions — and confident acting on the answers.
+          </p>
+
+          <div class="divider"></div>
+
+          <p class="list-title">The impression I aim to leave</p>
+          <p class="quote">“This person is professional. I trust her.”</p>
+          <p class="quote">“She understands the real pitfalls for landlords in Germany.”</p>
+          <p class="quote">“Her guidance feels more reliable than typical intermediaries.”</p>
+        </aside>
+      </main>
+
+      <footer id="contact">
+        <span>© <script>document.write(new Date().getFullYear())</script> German Landlord Guide</span>
+        <span>
+          Contact: <a href="mailto:hello@example.com">hello@example.com</a>
+        </span>
+      </footer>
     </div>
-  </div>
-
+  </section>
 </body>
 </html>
