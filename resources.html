@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resources – German Landlord Guide</title>
+  <meta name="description" content="Helpful resources for landlords in Germany." />
+
+  <style>
+    :root {
+      --bg: #0b1220;
+      --panel: rgba(18, 22, 32, 0.72);
+      --text: #f2f4f6;
+      --accent: #3a6cff;
+      --muted: rgba(240,240,240,0.7);
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 120px 20px 60px;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(10, 14, 22, 0.85);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      padding: 14px 32px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      z-index: 1000;
+    }
+
+    .header-logo {
+      height: 34px;
+      margin-right: 12px;
+    }
+
+    .site-title {
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--text);
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    p.lead {
+      font-size: 16px;
+      color: var(--muted);
+      margin-bottom: 32px;
+    }
+
+    .resource-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .resource-item {
+      background: var(--panel);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .resource-item h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+    }
+
+    .resource-item p {
+      margin: 0 0 10px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .resource-item a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .resource-item a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="logo.png" alt="German Landlord Guide Logo" class="header-logo" />
+    <span class="site-title">German Landlord Guide</span>
+  </header>
+
+  <main>
+    <h1>Landlord Resources</h1>
+    <p class="lead">Curated tools, templates, and practical knowledge for property owners in Germany.</p>
+
+    <ul class="resource-list">
+      <li class="resource-item">
+        <h3>📄 Standard Rental Contract Template</h3>
+        <p>A simplified German-English rental agreement template (PDF) — coming soon.</p>
+        <a href="#">Preview or download</a>
+      </li>
+      <li class="resource-item">
+        <h3>📘 Tenant Rights & Landlord Obligations</h3>
+        <p>Clear overview of what’s required from both sides under German law.</p>
+        <a href="#">Read summary</a>
+      </li>
+      <li class="resource-item">
+        <h3>💶 Tax Overview for Private Landlords</h3>
+        <p>How to handle rental income, deductible costs, and common mistakes.</p>
+        <a href="#">Learn more</a>
+      </li>
+      <li class="resource-item">
+        <h3>📊 Legal Limits on Rent Increases</h3>
+        <p>How much can you raise rent legally? Including tips on index vs fixed increases.</p>
+        <a href="#">View article</a>
+      </li>
+      <li class="resource-item">
+        <h3>🔐 What if the tenant won’t move out?</h3>
+        <p>Step-by-step guide to lawful eviction in complex cases.</p>
+        <a href="#">Read guide</a>
+      </li>
+    </ul>
+  </main>
+</body>
+</html>
