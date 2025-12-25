@@ -314,6 +314,28 @@
         color: white;
     }
 
+    .site-branding {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .subtitle-divider {
+        width: 160px;
+        height: 1px;
+        background: linear-gradient(to right, transparent, #c8aa6e, transparent);
+        margin: 6px 0 4px 0;
+        opacity: 0.85;
+    }
+
+    .site-subtitle {
+        font-size: 11px;
+        color: #ccc;
+        letter-spacing: 1.8px;
+        text-transform: uppercase;
+        opacity: 0.88;
+    }
+    
     .gold-text {
         color: #CBA135;
         font-weight: bold;
@@ -332,20 +354,8 @@
   </style>
 </head>
 
-<body>
-<!--<header class="site-header">
-    <div class="header-content">
-        <img src="logo.png" alt="German Landlord Guide" class="header-logo" />
-        <span class="site-title">German Landlord Guide</span>
-    </div>
-
-    <nav class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="resources.html" class="nav-link">Resources</a>
-    </nav>
-  </header>-->
- 
-  <header class="site-header">
+<body> 
+  <!--<<header class="site-header">
     <div class="header-content">
         <img src="logo.png" alt="German Landlord Guide" class="header-logo" />
         <span class="site-title">German Landlord Guide</span>
@@ -355,8 +365,22 @@
         <a href="resources.html">Resources</a>
         </nav>
     </div>
-  </header>
+  </header>-->
 
+  <header class="site-header">
+    <div class="header-content">
+        <div class="site-branding">
+        <span class="site-title">German Landlord Guide</span>
+        <div class="subtitle-divider"></div>
+        <span class="site-subtitle">CALM · STRUCTURED · TRUSTED</span>
+        </div>
+
+        <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="resources.html">Resources</a>
+        </nav>
+    </div>
+  </header>
 
   <section class="hero">
     <div class="container">
