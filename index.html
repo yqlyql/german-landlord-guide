@@ -51,11 +51,15 @@
       opacity: .90;
     }
     .hero::after{
-      /* dark overlay for “consulting” mood */
-      content:"";
-      position:absolute; inset:0;
-      background: radial-gradient(1000px 600px at 20% 25%, rgba(0,0,0,.35), rgba(0,0,0,.72)),
-                  linear-gradient(90deg, rgba(0,0,0,.68) 0%, rgba(0,0,0,.45) 45%, rgba(0,0,0,.65) 100%);
+    content:"";
+    position:absolute;
+    inset:0;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.35) 0%,
+        rgba(0, 0, 0, 0.20) 50%,
+        rgba(0, 0, 0, 0.35) 100%
+    );
     }
 
     .container{
@@ -326,7 +330,7 @@
           <p class="list-title">The impression I aim to leave</p>
           <p class="quote">“This person is professional. I trust her.”</p>
           <p class="quote">“She understands the real pitfalls for landlords in Germany.”</p>
-          <p class="quote">“Her guidance feels more reliable than typical intermediaries.”</p>
+          <p class="quote">“Here guidance feels more reliable than typical intermediaries.”</p>
         </aside>
       </main>
 
