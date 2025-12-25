@@ -1,0 +1,30 @@
+body {
+  font-family: sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 2em;
+  max-width: 700px;
+  margin: auto;
+}
+h1 {
+  color: #5a4fcf;
+}
+form input {
+  padding: 0.5em;
+  width: 60%;
+  margin-right: 1em;
+}
+button {
+  padding: 0.5em 1em;
+  background-color: #5a4fcf;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+footer {
+  margin-top: 2em;
+  text-align: center;
+  font-size: 0.9em;
+  color: #aaa;
+}
