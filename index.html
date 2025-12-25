@@ -199,25 +199,38 @@
       color: rgba(255,255,255,0.85);
     }
 
-    .header-logo {
-    height: 38px;
-    display: block;
-    object-fit: contain;
+    .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 12px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: rgba(11, 18, 32, 0.6);
+        backdrop-filter: blur(8px);
+        z-index: 1000;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
-    .site-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 12px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: rgba(11, 18, 32, 0.6); /* 深色半透明背景 */
-    backdrop-filter: blur(8px);        /* ✅ 高端磨砂效果 */
-    z-index: 1000;                     /* 确保在最上层 */
-    border-bottom: 1px solid rgba(255,255,255,0.1); /* 精致边框 */
+    .header-content {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .header-logo {
+        height: 38px;
+        display: block;
+        object-fit: contain;
+    }
+
+    .site-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: white;
+        opacity: 0.88;
     }
 
     @media (max-width: 900px) {
