@@ -278,6 +278,21 @@
         border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
+    .site-header::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(
+            to right,
+            transparent,
+            rgba(203, 161, 53, 0.8),
+            transparent
+        );
+    }
+
     .header-content {
         display: flex;
         align-items: center;
