@@ -357,6 +357,18 @@
         grid-template-columns: 1fr;
       }
     }
+    @keyframes softGlow {
+        0%, 100% {
+            opacity: 0.7;
+        }
+        50% {
+            opacity: 1;
+        }
+        }
+
+        .subtitle-divider {
+        animation: softGlow 6s ease-in-out infinite;
+    }
   </style>
 </head>
 
