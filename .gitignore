@@ -1,0 +1,23 @@
+# macOS metadata
+.DS_Store
+.DS_Store?
+._*
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Editor temporaries
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.sublime-workspace
+
+# OS-generated
+Thumbs.db
+ehthumbs.db
+Desktop.ini
