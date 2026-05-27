@@ -5,19 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Resources – German Landlord Guide</title>
   <meta name="description" content="Practical guides and structured insights for property owners in Germany." />
+  <link rel="stylesheet" href="style.css">
 
   <style>
-    :root {
-      --bg: #0b1220;
-      --text: #f2f4f6;
-    }
-
     body {
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: var(--bg);
-      color: var(--text);
       position: relative;
     }
 
@@ -41,95 +32,6 @@
       inset: 0;
       background: rgba(11, 18, 32, 0.68);
       z-index: -1;
-    }
-
-    /* ── Header (matches index.html exactly) ── */
-    .site-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 12px 32px;
-      background: rgba(11, 18, 32, 0.6);
-      backdrop-filter: blur(8px);
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .site-header::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 1px;
-      background: linear-gradient(
-        to right,
-        transparent,
-        rgba(203, 161, 53, 0.8),
-        transparent
-      );
-    }
-
-    .header-content {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
-
-    .site-branding {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .site-title {
-      font-size: 16px;
-      font-weight: 600;
-      color: white;
-      opacity: 0.88;
-    }
-
-    .subtitle-divider {
-      width: 160px;
-      height: 1.5px;
-      background: linear-gradient(to right, transparent, #e6c36a, transparent);
-      margin: 6px 0 4px 0;
-      opacity: 0.95;
-      box-shadow: 0 0 6px rgba(230, 195, 106, 0.35);
-      animation: softGlow 6s ease-in-out infinite;
-    }
-
-    .site-subtitle {
-      font-size: 11px;
-      color: #ccc;
-      letter-spacing: 1.8px;
-      text-transform: uppercase;
-      opacity: 0.88;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      margin-left: 24px;
-    }
-
-    .nav-links a {
-      color: rgba(255, 255, 255, 0.85);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 500;
-    }
-
-    .nav-links a:hover {
-      color: white;
-    }
-
-    @keyframes softGlow {
-      0%, 100% { opacity: 0.7; }
-      50%       { opacity: 1;   }
     }
 
     /* ── Page layout ── */
@@ -347,6 +249,8 @@
         Educational content only.
         <span class="sep">·</span>
         Not legal, tax, or financial advice.
+        <span class="sep">·</span>
+        <a class="legal-link" href="impressum.html">Impressum</a>
       </p>
 
     </div>

@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Impressum – German Landlord Guide</title>
+  <meta name="description" content="Impressum for German Landlord Guide." />
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      min-height: 100vh;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url("websitebackgroundimage.png");
+      background-size: cover;
+      background-position: center;
+      filter: blur(3px) brightness(0.32);
+      transform: scale(1.04);
+      z-index: -2;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(11, 18, 32, 0.72);
+      z-index: -1;
+    }
+
+    .impressum-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 120px 40px 80px;
+    }
+
+    .impressum-card {
+      background: rgba(18, 22, 32, 0.72);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 18px;
+      padding: 40px 44px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 20px 48px rgba(0,0,0,0.28);
+    }
+
+    .impressum-card h1 {
+      margin: 0 0 24px;
+      font-size: 30px;
+      font-weight: 580;
+      letter-spacing: -0.2px;
+      color: rgba(255,255,255,0.95);
+    }
+
+    .detail-group {
+      margin-bottom: 26px;
+    }
+
+    .detail-label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 10.5px;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: rgba(203, 161, 53, 0.72);
+    }
+
+    .detail-text {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .impressum-disclaimer {
+      margin: 32px 0 0;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      font-size: 13px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.46);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 28px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 700px) {
+      .impressum-wrap {
+        padding: 100px 20px 60px;
+      }
+
+      .impressum-card {
+        padding: 32px 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <div class="site-branding">
+        <span class="site-title">German Landlord Guide</span>
+        <div class="subtitle-divider"></div>
+        <span class="site-subtitle">CALM · STRUCTURED · TRUSTED</span>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="resources.html">Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="impressum-wrap">
+    <section class="impressum-card">
+      <h1>Impressum</h1>
+
+      <div class="detail-group">
+        <span class="detail-label">Name / Publisher</span>
+        <p class="detail-text">
+          German Landlord Guide<br>
+          Operated by Yunqi Luo
+        </p>
+      </div>
+
+      <div class="detail-group">
+        <span class="detail-label">Location</span>
+        <p class="detail-text">Berlin, Germany</p>
+      </div>
+
+      <div class="detail-group">
+        <span class="detail-label">Email</span>
+        <p class="detail-text">germanlandlordguide@gmail.com</p>
+      </div>
+
+      <p class="impressum-disclaimer">
+        <strong>Disclaimer</strong><br><br>
+        This website provides informational content only and does not constitute financial, legal, tax, or investment advice.<br><br>
+        While reasonable efforts are made to keep information accurate and up to date, no guarantees are provided regarding completeness, accuracy, or reliability.<br><br>
+        External links are provided for convenience only. We are not responsible for the content of third-party websites.<br><br>
+        All content on this website is subject to applicable copyright laws unless otherwise stated.
+      </p>
+
+      <a class="legal-link back-link" href="index.html">Back to homepage</a>
+    </section>
+  </main>
+</body>
+</html>
