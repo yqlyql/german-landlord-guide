@@ -1,0 +1,23 @@
+Please improve the visual atmosphere of the resources.html page by making it slightly lighter and more breathable while preserving the premium dark aesthetic.
+
+Requirements:
+- Do NOT redesign the page
+- Do NOT change layout
+- Do NOT change typography
+- Do NOT change spacing or structure
+- Do NOT modify content
+- Keep the same visual identity
+
+Only make subtle atmospheric adjustments such as:
+- slightly increasing background image visibility
+- slightly reducing the darkness of overlays
+- slightly improving card/background contrast
+- maintaining readability and elegance
+
+Focus only on:
+- background brightness
+- overlay opacity
+- subtle visual depth
+
+Please make small, conservative adjustments only.
+Before editing, explain exactly which CSS values you plan to tweak.
